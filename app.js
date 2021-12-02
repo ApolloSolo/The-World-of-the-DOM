@@ -1,18 +1,43 @@
-const allImages = document.getElementsByTagName('img');
+const hOne = document.querySelector("h1");
+const firstPara = document.querySelector("p");
+//firstPara.innerText = "LOLOLOLOL"
 
-for (let img of allImages) {
-    img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg'
+const allLinks = document.querySelectorAll("a");
+
+for(links of allLinks){
+    links.innerText = "I am a LINK"
 }
 
+hOne.innerHTML += '<sup>2</sup>'
 
-const squareImages = document.getElementsByClassName('square');
+const input = document.querySelector('input[type="text"]');
 
-for (let img of squareImages) {
-    img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg';
-}
+console.log(input.type);
 
-const links = document.querySelectorAll('p a');
+input.type = 'color'
 
-for (let link of links) {
-    console.log(link.href)
-}
+//set a class attribute 
+const h2 = document.querySelector('h2');
+
+h2.setAttribute('class', 'purple');
+firstPara.setAttribute('class', 'border');
+
+//class list
+console.log(h2.classList);
+h2.classList.add('border');
+//h2.classList.remove('border')
+
+//Toggle classes vis .classList.toggle("class");
+console.log(h2.classList.contains('border')); //true - class is applied
+h2.classList.toggle('border');                //Toggle border class off
+console.log(h2.classList.contains('border')); //false - class was removed
+
+const newImg = document.createElement('img');
+newImg.src = 'https://images.unsplash.com/photo-1637952112301-6090dca83ccb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'
+document.body.appendChild(newImg);
+
+//insertAdjacentElement('afterend' - 'beforeend' - 'afterbegin' - 'beforebegin')
+const newB = document.createElement('b') 
+newB.append('New Bold Tag');
+hOne.insertAdjacentElement('afterend', newB);
+
