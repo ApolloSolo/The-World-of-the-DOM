@@ -4,7 +4,7 @@ const input = document.querySelector('#cat-name-input');
 const ulList = document.querySelector('#cat-name-list');
 
 //function used in submit event
-function addLi (catName){                        //catName arg passed for innerText (out cat name input)
+function addLi (catName){                        //catName arg passed for innerText (our cat name input)
     let listItem = document.createElement('li'); //create an <li> element
     listItem.innerText = catName;                //Set the <li> innerText to our arg (will pass in cat name input) 
     ulList.append(listItem);                     //add the li element to the <ul> 
