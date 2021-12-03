@@ -16,5 +16,9 @@ form.addEventListener('submit', function(e) {   //e for event to preventDefault 
     addLi(name);                               //run our function that inputs name value into our appended <li>
 })
 
+ulList.addEventListener('click', (e) => {
+    e.target.nodeName === "LI" && e.target.remove();  //using parent element to remove child. 
+})
+
 
 
